@@ -1,4 +1,10 @@
-def birthdayCakeCandlesRecursive(candles, index=0, max_height=0, count=0):
+def birthdayCakeCandlesRecursive(candles, index=1, max_height=None, count=1):
+    if len(candles) == 0:
+        return 0
+
+    if max_height is None:
+        max_height = candles[0]
+
     if index == len(candles):
         return count
 
